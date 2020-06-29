@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
+        <link rel="stylesheet" href="style/index.css" />
+        <link rel="stylesheet" href="style/swiper.min.css" />
+        <title>搜狗商场</title>
+    </head>
+    <body>
+        <!-- 头部 -->
+        <header></header>
+        <!-- 轮播图 -->
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><img class="swi" src="images/sw1.png" alt="" /></div>
+                <div class="swiper-slide"><img class="swi" src="images/sw2.png" alt="" /></div>
+                <div class="swiper-slide"><img class="swi" src="images/sw3.png" alt="" /></div>
+                <div class="swiper-slide"><img class="swi" src="images/sw4.png" alt="" /></div>
+                <div class="swiper-slide"><img class="swi" src="images/sw5.png" alt="" /></div>
+                <div class="swiper-slide"><img class="swi" src="images/sw6.png" alt="" /></div>
+                <div class="swiper-slide"><img class="swi" src="images/sw7.png" alt="" /></div>
+                <div class="swiper-slide"><img class="swi" src="images/sw8.jpg" alt="" /></div>
+            </div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-pagination"></div>
+        </div>
+
+
+        <script src="js/jquery.min.js"></script>
+        <script src="js/swiper.min.js"></script>
+        <script>
+            //引入头部html
+            $("header").load("html/header_.html");
+            //轮播
+            var mySwiper = new Swiper(".swiper-container", {
+                autoplay: true, //可选选项，自动滑动
+                loop: true,
+                pagination: {
+                    el: ".swiper-pagination",
+                },
+                navigation: {
+                    nextEl: ".swiper-button-next",
+                    prevEl: ".swiper-button-prev",
+                },
+            });
+            
+        </script>
+    </body>
+</html>

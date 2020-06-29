@@ -1,0 +1,66 @@
+/* 初始化样式 */
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+legend,
+input,
+button,
+textarea,
+p,
+blockquote,
+th,
+td {
+    margin: 0;
+    padding: 0;
+}
+img {
+    border: none;
+}
+ol,
+ul,
+li {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+}
+fl {
+    float: left;
+}
+/* 轮播 */
+.swiper-container {
+    margin-top: 81px;
+}
+.swi {
+    width: 100%;
+    cursor: pointer;
+}
+
+
+.swiper-container .swiper-pagination-bullet{
+    display: inline-block;
+    cursor: pointer;
+    width: 16px;
+    height: 4px;
+    border-radius: 2px;
+    margin: 0 2px;
+    opacity: 1;
+}
+.swiper-container {
+    --swiper-pagination-color: #ea413c;
+}
