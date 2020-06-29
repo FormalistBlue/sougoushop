@@ -1,0 +1,261 @@
+@charset "UTF-8";
+/* 初始化样式 */
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+legend,
+input,
+button,
+textarea,
+p,
+blockquote,
+th,
+td {
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  border: none;
+}
+
+ol,
+ul,
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* 头部 */
+.headerContainer {
+  width: 100%;
+  height: 40px;
+  background-color: #262626;
+}
+
+.headBox {
+  width: 1180px;
+  height: 40px;
+  margin: 0 auto;
+  background-color: #262626;
+}
+
+.leftTittle {
+  float: left;
+  display: block;
+  width: 48px;
+  height: 40px;
+  line-height: 40px;
+  font-size: 12px;
+  text-decoration: none;
+  color: #bfbfbf;
+}
+
+.leftTittle:hover {
+  color: #fff;
+}
+
+.rightTittle {
+  float: right;
+  display: block;
+  width: 48px;
+  height: 40px;
+  line-height: 40px;
+  font-size: 12px;
+  text-decoration: none;
+  color: #bfbfbf;
+}
+
+.rightTittle:hover {
+  color: #fff;
+}
+
+.segmentationL {
+  float: left;
+  width: 1px;
+  height: 12px;
+  background: #444444;
+  margin: 14px 10px;
+}
+
+.segmentationR {
+  float: right;
+  width: 1px;
+  height: 12px;
+  background: #444444;
+  margin: 14px 10px;
+}
+
+.cart {
+  float: right;
+  width: 124px;
+  height: 40px;
+  font-size: 12px;
+  text-align: center;
+  line-height: 40px;
+  background: #ea413c;
+  color: #fff;
+  margin-left: 20px;
+}
+
+.cart:hover {
+  background: #c42929;
+}
+
+.register {
+  float: right;
+  margin-left: 10px;
+  display: block;
+  height: 40px;
+  line-height: 40px;
+  font-size: 12px;
+  text-decoration: none;
+  color: #bfbfbf;
+}
+
+.register:hover {
+  color: #fff;
+}
+
+.login {
+  float: right;
+  display: block;
+  height: 40px;
+  line-height: 40px;
+  font-size: 12px;
+  text-decoration: none;
+  color: #bfbfbf;
+}
+
+.login:hover {
+  color: #fff;
+}
+
+/* 头部导航栏 */
+.navbarContainer {
+  width: 100%;
+  height: 80px;
+  border-bottom: 1px solid #e8e8e8;
+  background-color: #fff;
+  position: relative;
+  z-index: 5;
+}
+
+.navBox {
+  width: 1180px;
+  height: 80px;
+  margin: 0 auto;
+}
+
+.logo {
+  float: left;
+  width: 168px;
+  height: 40px;
+  line-height: 40px;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.logoImg {
+  display: inline-block;
+  vertical-align: middle;
+  background-image: url(../images/icon-s829573e7f5.png);
+  background-position: -126px -157px;
+  height: 36px;
+  width: 44px;
+  background-repeat: no-repeat;
+}
+
+.logoName {
+  font-size: 28px;
+  font-weight: normal;
+  color: #262626;
+  vertical-align: middle;
+  display: inline;
+}
+
+/* 菜单栏 */
+.menu {
+  float: left;
+  margin-left: 75px;
+  height: 80px;
+  line-height: 80px;
+}
+
+.menu li {
+  float: left;
+  padding: 0 25px;
+  font-size: 16px;
+}
+
+.menu li a {
+  color: #202020;
+}
+
+.menu li a:hover,
+active {
+  color: #ea413c;
+}
+
+.mainContainer {
+  float: left;
+  position: relative;
+  width: 100%;
+  height: 560px;
+  background: #202020;
+}
+.mainContainer .bg {
+  background: url(../images/registerBG.png);
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-width: 1200px;
+  background-color: #1a1d23;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.mainContainer .registerBox {
+  width: 400px;
+  height: 390px;
+  padding-top: 30px;
+  background: #f6f6f7;
+  font-size: 12px;
+  color: #8c8c8c;
+  position: absolute;
+  top: 70px;
+  left: 50%;
+  margin-left: 200px;
+  z-index: 1;
+}
+.mainContainer .registerBox .title {
+  text-align: center;
+  font-size: 20px;
+  line-height: 20px;
+  color: #595959;
+  margin-bottom: 30px;
+  font-weight: bold;
+}
+.mainContainer .registerBox .form-control {
+  margin: 0 auto;
+  width: 75%;
+}
+
+/*# sourceMappingURL=register.css.map */
