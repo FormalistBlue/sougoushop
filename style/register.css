@@ -43,6 +43,9 @@ li {
 a {
   text-decoration: none;
 }
+a:hover {
+  text-decoration: none;
+}
 
 /* 头部 */
 .headerContainer {
@@ -191,6 +194,9 @@ a {
   vertical-align: middle;
   display: inline;
 }
+.logoName:hover {
+  text-decoration: none;
+}
 
 /* 菜单栏 */
 .menu {
@@ -213,6 +219,7 @@ a {
 .menu li a:hover,
 active {
   color: #ea413c;
+  text-decoration: none;
 }
 
 .mainContainer {

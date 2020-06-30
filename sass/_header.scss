@@ -38,6 +38,9 @@ li {
 }
 a {
     text-decoration: none;
+    &:hover{
+        text-decoration: none;
+    }
 }
 /* 头部 */
 .headerContainer {
@@ -167,6 +170,9 @@ a {
     color: #262626;
     vertical-align: middle;
     display: inline;
+    &:hover{
+        text-decoration: none;
+    }
 }
 /* 菜单栏 */
 .menu {
@@ -186,4 +192,5 @@ a {
 .menu li a:hover,
 active {
     color: #ea413c;
+    text-decoration: none;
 }
