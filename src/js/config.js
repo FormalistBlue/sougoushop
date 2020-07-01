@@ -1,0 +1,10 @@
+require.config({
+    baseUrl:"/",
+    paths:{
+        'header':'/js/modules/header',
+        'footer':'/js/modules/footer',
+        'jquery':'/libs/jquery.min',
+        'swiper':'/libs/swiper.min',
+        'myswiper':'/js/modules/myswiper',
+    }
+})

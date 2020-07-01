@@ -28,7 +28,7 @@ gulp.task("html", () => {
             })
         )
         .pipe(gulp.dest("dist/html"))
-        .pipe(connect.reload())
+        .pipe(connect.reload());
 });
 
 gulp.task("index", () => {
@@ -53,7 +53,7 @@ gulp.task("index", () => {
             })
         )
         .pipe(gulp.dest("dist"))
-        .pipe(connect.reload())
+        .pipe(connect.reload());
 });
 
 gulp.task("css1", () => {
@@ -61,7 +61,7 @@ gulp.task("css1", () => {
         .pipe(sass()) // sass 转 CSS
         .pipe(cleanCss()) // 压缩 CSS 代码
         .pipe(gulp.dest("dist/css"))
-        .pipe(connect.reload())
+        .pipe(connect.reload());
 });
 
 gulp.task("css2", () => {
@@ -73,7 +73,7 @@ gulp.task("css2", () => {
 });
 
 gulp.task("js", () => {
-    gulp.src("src/js/**")
+    gulp.src("src/js/**/*.js")
         .pipe(
             babel({
                 presets: ["@babel/env"],
@@ -88,21 +88,25 @@ gulp.task("img", () => {
     gulp.src("src/images/**").pipe(gulp.dest("dist/images"));
 });
 
+gulp.task("libs", () => {
+    gulp.src("src/libs/**").pipe(gulp.dest("dist/libs"));
+});
+
 gulp.task("watch", () => {
     gulp.watch("src/style/**", ["css2"]);
     gulp.watch("src/sass/**", ["css1"]);
     gulp.watch("src/html/*.html", ["html"]);
     gulp.watch("src/index.html", ["index"]);
     gulp.watch("src/js/**", ["js"]);
+    gulp.watch("src/libs/**", ["libs"]);
     gulp.watch("src/images/**", ["img"]);
 });
-gulp.task('server', function () {
-
+gulp.task("server", function () {
     connect.server({
         livereload: true,
         port: 2003,
-        root: 'dist'
+        root: "dist",
     });
 });
 
-gulp.task('default', ['html','index', 'css1','css2', 'js', 'img', 'watch', 'server'])
+gulp.task("default", ["html", "index", "css1", "libs", "css2", "js", "img", "watch", "server"]);
