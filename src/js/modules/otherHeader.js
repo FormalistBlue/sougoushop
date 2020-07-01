@@ -1,11 +1,11 @@
 define(["jquery"], ($) => {
-    class Footer {
+    class OtherHeader {
         constructor() {
             this.load();
         }
         load() {
-            $("footer").load("html/modules/footer.html");
+            $("header").load("modules/header.html");
         }
     }
-    return new Footer();
+    return new OtherHeader();
 });

@@ -7,7 +7,7 @@ const gulp = require("gulp"),
     connect = require("gulp-connect");
 
 gulp.task("html", () => {
-    gulp.src("src/html/*.html")
+    gulp.src("src/html/**")
         .pipe(
             htmlmin({
                 removeComments: true, //清除HTML注释

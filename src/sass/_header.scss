@@ -39,7 +39,7 @@ li {
 }
 a {
     text-decoration: none;
-    &:hover{
+    &:hover {
         text-decoration: none;
     }
 }
@@ -54,30 +54,70 @@ a {
     height: 40px;
     margin: 0 auto;
     background-color: #262626;
+    .rightTittle {
+        float: right;
+        display: block;
+        height: 40px;
+        line-height: 40px;
+        font-size: 12px;
+        text-decoration: none;
+        color: #bfbfbf;
+    }
+    .cart {
+        float: right;
+        width: 124px;
+        height: 40px;
+        font-size: 12px;
+        text-align: center;
+        line-height: 40px;
+        background: #ea413c;
+        color: #fff;
+        margin-left: 20px;
+    }
+    .cart:hover {
+        background: #c42929;
+    }
+    .register {
+        float: right;
+        margin-left: 10px;
+        display: block;
+        height: 40px;
+        line-height: 40px;
+        font-size: 12px;
+        text-decoration: none;
+        color: #bfbfbf;
+    }
+    .register:hover {
+        color: #fff;
+    }
+    .login {
+        float: right;
+        display: block;
+        height: 40px;
+        line-height: 40px;
+        font-size: 12px;
+        text-decoration: none;
+        color: #bfbfbf;
+    }
+    .login:hover {
+        color: #fff;
+    }
+    .leftTittle {
+        float: left;
+        display: block;
+        width: 48px;
+        height: 40px;
+        line-height: 40px;
+        font-size: 12px;
+        text-decoration: none;
+        color: #bfbfbf;
+    }
+    .leftTittle:hover {
+        color: #fff;
+    }
 }
-.leftTittle {
-    float: left;
-    display: block;
-    width: 48px;
-    height: 40px;
-    line-height: 40px;
-    font-size: 12px;
-    text-decoration: none;
-    color: #bfbfbf;
-}
-.leftTittle:hover {
-    color: #fff;
-}
-.rightTittle {
-    float: right;
-    display: block;
-    width: 48px;
-    height: 40px;
-    line-height: 40px;
-    font-size: 12px;
-    text-decoration: none;
-    color: #bfbfbf;
-}
+
+
 .rightTittle:hover {
     color: #fff;
 }
@@ -95,45 +135,7 @@ a {
     background: #444444;
     margin: 14px 10px;
 }
-.cart {
-    float: right;
-    width: 124px;
-    height: 40px;
-    font-size: 12px;
-    text-align: center;
-    line-height: 40px;
-    background: #ea413c;
-    color: #fff;
-    margin-left: 20px;
-}
-.cart:hover {
-    background: #c42929;
-}
-.register {
-    float: right;
-    margin-left: 10px;
-    display: block;
-    height: 40px;
-    line-height: 40px;
-    font-size: 12px;
-    text-decoration: none;
-    color: #bfbfbf;
-}
-.register:hover {
-    color: #fff;
-}
-.login {
-    float: right;
-    display: block;
-    height: 40px;
-    line-height: 40px;
-    font-size: 12px;
-    text-decoration: none;
-    color: #bfbfbf;
-}
-.login:hover {
-    color: #fff;
-}
+
 /* 头部导航栏 */
 .navbarContainer {
     width: 100%;
@@ -147,34 +149,36 @@ a {
     width: 1180px;
     height: 80px;
     margin: 0 auto;
-}
-.logo {
-    float: left;
-    width: 168px;
-    height: 40px;
-    line-height: 40px;
-    margin-top: 20px;
-    text-align: center;
-}
-.logoImg {
-    display: inline-block;
-    vertical-align: middle;
-    background-image: url(/images/icon-s829573e7f5.png);
-    background-position: -126px -157px;
-    height: 36px;
-    width: 44px;
-    background-repeat: no-repeat;
-}
-.logoName {
-    font-size: 28px;
-    font-weight: normal;
-    color: #262626;
-    vertical-align: middle;
-    display: inline;
-    &:hover{
+    .logo {
+        float: left;
+        width: 168px;
+        height: 40px;
+        line-height: 40px;
+        margin-top: 20px;
+        text-align: center;
         text-decoration: none;
     }
+    .logoImg {
+        display: inline-block;
+        vertical-align: middle;
+        background-image: url(/images/icon-s829573e7f5.png);
+        background-position: -126px -157px;
+        height: 36px;
+        width: 44px;
+        background-repeat: no-repeat;
+    }
+    .logoName {
+        font-size: 28px;
+        font-weight: normal;
+        color: #262626;
+        vertical-align: middle;
+        display: inline;
+        &:hover {
+            text-decoration: none;
+        }
+    }
 }
+
 /* 菜单栏 */
 .menu {
     float: left;
@@ -189,6 +193,7 @@ a {
 }
 .menu li a {
     color: #202020;
+    text-decoration: none;
 }
 .menu li a:hover,
 active {

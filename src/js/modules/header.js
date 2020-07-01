@@ -4,7 +4,7 @@ define(["jquery"], ($) => {
             this.load();
         }
         load() {
-            $("header").load("html/header_.html");
+            $("header").load("html/modules/header.html");
         }
     }
     return new Header();
