@@ -1,5 +1,5 @@
 require(["../js/config.js"], () => {
-    require(["jquery", "otherHeader", "footer"], ($) => {
+    require(["jquery", "header", "footer"], ($) => {
      
     });
 });
