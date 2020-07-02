@@ -1,4 +1,4 @@
-require(["../js/config.js"], () => {
+require(["/js/config.js"], () => {
     require(["jquery", "header", "footer"], ($) => {
      
     });

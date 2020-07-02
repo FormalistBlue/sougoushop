@@ -24,14 +24,19 @@
                 <span class="logoImg"></span>
                 <span class="logoName">搜狗商城</span>
             </a>
-            <ul class="menu">
-                <li><a href="/index.html">首页</a></li>
+            <ul class="menu" id="navList">
+                <!-- <li><a href="/index.html">首页</a></li>
                 <li><a href="#">智能翻译</a></li>
                 <li><a href="#">糖猫手表</a></li>
                 <li><a href="#">配件</a></li>
                 <li><a href="#">社区</a></li>
-                <li><a href="#">录音笔网页版</a></li>
+                <li><a href="#">录音笔网页版</a></li> -->
             </ul>
+            <script type="text/html" id="navLi">
+                {{each data item}}
+                    <li><a href='/html/goodlist.html?i={{item.id}}'>{{item.name}}</a></li>
+                {{/each}}
+            </script>
         </div>
     </nav>
 </div>
