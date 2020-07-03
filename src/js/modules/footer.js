@@ -4,7 +4,7 @@ define(["jquery"], ($) => {
             this.load();
         }
         load() {
-            $("footer").load("html/modules/footer.html");
+            $("footer").load("/html/modules/footer.html");
         }
     }
     return new Footer();

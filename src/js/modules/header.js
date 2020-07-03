@@ -1,4 +1,4 @@
-define(["jquery", "url", "template"], ($, url,template) => {
+define(["jquery", "url", "template", "request"], ($, url, template, req) => {
     class Header {
         constructor() {
             this.load();
@@ -8,25 +8,12 @@ define(["jquery", "url", "template"], ($, url,template) => {
             this.getNav();
         }
         getNav() {
-            // $.get(`${url.sgsc}/pc/setting.json?c=pc&s=10000&t=1593681327474&v=1.0`,res=>{
-            //     console.log(res);
-            // })
-            $.ajax({
-                type: "get",
-                url: `${url.xmyx}tabs?sa=`,
-                success: (res) => {
-                    if (res.code === 200) {
-                        const data = res.data.list.slice(1, 7);
-                        console.log(data);
-                        this.showNav(data);
-                    }
-                },
+            req.getNavList().then((res) => {
+                if (res.code === 200) {
+                    const data = res.data.list.slice(1, 7);
+                    this.showNav(data);
+                }
             });
-
-            // $.getJSON(`${url.sgsc}/pc/setting.json?c=pc&s=10000&t=1593681327474&v=1.0?q=javascript&count=1&callback=?`, function(data){
-            //     console.log(data);
-            // 	alert("jsonp success!");
-            // });
         }
         showNav(data) {
             $("#navList").html(template("navLi", { data }));

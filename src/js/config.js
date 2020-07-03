@@ -7,6 +7,7 @@ require.config({
         'swiper':'/libs/swiper.min',
         'myswiper':'/js/modules/myswiper',
         'url':'/js/url',
-        'template':'/libs/template-web'
+        'template':'/libs/template-web',
+        'request':'/js/modules/request'
     }
 })
