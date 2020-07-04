@@ -15,12 +15,14 @@
                 <div class="detailBox" >
             <div class="detailLeft">
                 <div class="topImgBox">
-                    <img src="{{list.photo[0].url}}" alt="" />
+                    <img class="zoom-image" src="{{list.photo[0].url}}" alt="" />
                 </div>
                 <div class="bottomBox">
                     {{each photo item}}
                     <ul>
-                        <li><img src="{{item.url}}" alt=""></li>
+                        <a href="javascript:;" data-image="{{item.url}}" data-zoom-image="{{item.url}}">
+                            <li><img src="{{item.url}}" alt=""></li>
+                        </a>
                     </ul>
                     {{/each}}
                 </div>
