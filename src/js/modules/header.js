@@ -1,4 +1,4 @@
-define(["jquery", "url", "template", "request"], ($, url, template, req) => {
+define(["jquery","template", "request"], ($,template, req) => {
     class Header {
         constructor() {
             this.load();

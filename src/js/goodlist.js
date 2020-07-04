@@ -10,10 +10,9 @@ require(["/js/config.js"], () => {
                 this.getlist();
             }
             getlist() {
-                req.getListData().then((res) => {
+                const id = window.location.search.slice(1).split("=")[1];
+                req.getListData(id).then((res) => {
                     if (res.code === 200) {
-                        console.log(res);
-                        console.log(res.data.category);
                         let list = res.data.items.list;
                         let cname = res.data.category.cname;
                         let categoriesTitle = res.data.categoriesTitle;

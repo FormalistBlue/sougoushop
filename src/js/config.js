@@ -8,6 +8,16 @@ require.config({
         'myswiper':'/js/modules/myswiper',
         'url':'/js/url',
         'template':'/libs/template-web',
-        'request':'/js/modules/request'
+        'request':'/js/modules/request',
+        'zoom':'/libs/jquery.elevateZoom-3.0.8.min',
+        'cookie':'/libs/jquery.cookie'
+    },
+    shim: {
+        'zoom': {
+            deps: ['jquery']
+        },
+        'cookie':{
+            deps: ['jquery']
+        }
     }
 })

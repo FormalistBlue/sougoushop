@@ -1,11 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="/css/detail.css" />
+        <title>商品详情页</title>
+    </head>
+    <body>
+        <header></header>
+        <div id="showHere"></div>
+
+        <script type="text/html" id="goodDetail">
+            <div class="detailContainer">
+                <div class="detailBox" >
+            <div class="detailLeft">
+                <div class="topImgBox">
+                    <img src="{{list.photo[0].url}}" alt="" />
+                </div>
+                <div class="bottomBox">
+                    {{each photo item}}
+                    <ul>
+                        <li><img src="{{item.url}}" alt=""></li>
+                    </ul>
+                    {{/each}}
+                </div>
+            </div>
+            <div class="detailRight">
+                <div class="title">
+                    {{list.title}}
+                </div>
+                <div class="soldCount">
+                    {{list.qunTitle}}
+                </div>
+                <div class="priceBox">
+                    <span class="money">￥</span>
+                    <span class="price">{{list.price}}</span>
+                    <span class="freeSend">包邮</span>
+                </div>
+                <div class="countBox">
+                    <p class="countText">数量</p>
+                    <div class="countMachineBox">
+                        <div class="minusBox">
+                            -
+                        </div>
+                        <input class="countInput" value="1" type="text" />
+                        <div class="addBox">
+                            +
+                        </div>
+                    </div>
+                </div>
+                    <div class="buyBox">
+                        <div class="addcart twoBtn">
+                            <span>加入购物车</span>
+                        </div>
+                        <div class="buy twoBtn">
+                            <span>立即购买</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="detailBigPicBox">
+                {{each descPhoto ever}}
+                    <img src="{{ever.image.url}}" alt="">
+                {{/each}}
+            </div>
+        </script>
+        <script src="/libs/require.min.js" data-main="/js/detail.js"></script>
+    </body>
 </html>

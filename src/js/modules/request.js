@@ -8,9 +8,14 @@ define(["jquery"], () => {
             });
         },
         //商品列表页
-        getListData(){
+        getListData(id){
             return new Promise((resolve, reject) => {
-                $.get(`${this.baseUrl}tab/2?start=0`,resolve);
+                $.get(`${this.baseUrl}tab/${id}?start=0`,resolve);
+            });
+        },
+        getDetailData(id){
+            return new Promise((resolve, reject) => {
+                $.get(`${this.baseUrl}detail?id=${id}&normal=1&sa=`,resolve);
             });
         }
     };
