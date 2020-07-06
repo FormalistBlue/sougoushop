@@ -5,7 +5,7 @@ require(["/js/config.js"], () => {
         template,
         req
     ) => {
-        class GOodList {
+        class GoodList {
             constructor() {
                 this.getlist();
             }
@@ -24,6 +24,6 @@ require(["/js/config.js"], () => {
                 $("#goodsBox").html(template("goodList", { list, cname, categoriesTitle }));
             }
         }
-        return new GOodList();
+        return new GoodList();
     });
 });

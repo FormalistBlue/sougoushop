@@ -3,6 +3,7 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="icon" href="/images/favicon.ico" type="image/x-icon" />
         <link rel="stylesheet" href="/css/detail.css" />
         <title>商品详情页</title>
     </head>
@@ -15,11 +16,11 @@
                 <div class="detailBox" >
             <div class="detailLeft">
                 <div class="topImgBox">
-                    <img class="zoom-image" src="{{list.photo[0].url}}" alt="" />
+                    <img src="{{list.photo[0].url}}" alt=""  class="zoom-image"/>
                 </div>
                 <div class="bottomBox">
                     {{each photo item}}
-                    <ul>
+                    <ul id="gal1">
                         <a href="javascript:;" data-image="{{item.url}}" data-zoom-image="{{item.url}}">
                             <li><img src="{{item.url}}" alt=""></li>
                         </a>

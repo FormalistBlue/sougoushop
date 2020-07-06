@@ -10,14 +10,17 @@ require(["/js/config.js"], () => {
                     if (res.code === 200) {
                         console.log(res);
                         let list = res.data.detail;
-                        let photo = res. data.detail.photo;
-                        let descPhoto=res.data.detail.descContentList
-                        this.showDetail(list,photo,descPhoto);
+                        let photo = res.data.detail.photo;
+                        let descPhoto = res.data.detail.descContentList;
+                        this.showDetail(list, photo, descPhoto);
                     }
                 });
             }
-            showDetail(list,photo,descPhoto) {
-                $("#showHere").html(template("goodDetail", { list,photo,descPhoto }));
+            showDetail(list, photo, descPhoto) {
+                $("#showHere").html(template("goodDetail", { list, photo, descPhoto }));
+                $(".zoom-image").elevateZoom({
+                    gallery: "gal1",
+                });
             }
         }
         return new Detail();
