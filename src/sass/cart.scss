@@ -2,3 +2,93 @@
 @import "header";
 @import "footer";
 
+.cartContainer {
+    width: 100%;
+    margin-top: 80px;
+    .cartBox {
+        width: 1180px;
+        margin: 0 auto;
+        padding: 20px 0 10px 0;
+    }
+    .cartList {
+        font-size: 16px;
+        background-color: #fff;
+    }
+    .goodlist {
+        float: left;
+        width: 1180px;
+        padding: 20px;
+        .goodthead {
+            width: 1140px;
+            height: 41px;
+            background: #fafafa;
+            line-height: 40px;
+            font-weight: bold;
+            font-size: 14px;
+            color: #595959;
+            border: 0;
+            border: 1px solid #e9e9e9;
+            .checkAll {
+                float: left;
+                border-left: 1px solid #e9e9e9;
+                width: 65px;
+                height: 40px;
+                padding-left: 20px;
+                input {
+                    margin: 0 10px 2px 0;
+                    vertical-align: middle;
+                }
+            }
+            .goodHeadName {
+                width: 510px;
+            }
+            .singlePrice {
+                width: 120px;
+            }
+            .number {
+                width: 200px;
+            }
+            .smPrice {
+                width: 120px;
+            }
+            .doSome {
+                width: 100px;
+            }
+            .thead {
+                float: left;
+                text-align: center;
+                font-weight: bold;
+            }
+        }
+        .tbody {
+            .tr {
+                border-top: 1px solid #e8e8e8;
+                width: 1140px;
+            }
+            .listCheck {
+                float: left;
+                width: 85px;
+                line-height: 140px;
+                text-align: center;
+            }
+            .goodDesBox {
+                text-align: left;
+                width: 518px;
+                float: left;
+            }
+            .picBox {
+                width: 98px;
+                height: 98px;
+                margin-top: 20px;
+                overflow: hidden;
+                border-radius: 2px;
+                border: 1px solid #ededed;
+                img {
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+        }
+    }
+}

@@ -199,13 +199,16 @@
 }
 .detailBigPicBox {
     width: 1180px;
+    margin: 0;
     margin: 0 auto;
     height: auto;
     img {
         width: 1180px;
         border: none;
+        outline: none;
+        vertical-align: bottom;
     }
 }
-.zoomLens {
+.zoomContainer .zoomLens {
     cursor: move;
 }

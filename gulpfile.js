@@ -64,13 +64,7 @@ gulp.task("css1", () => {
         .pipe(connect.reload());
 });
 
-gulp.task("css2", () => {
-    gulp.src("src/style/**/*.css")
-        .pipe(sass()) // sass 转 CSS
-        .pipe(cleanCss()) // 压缩 CSS 代码
-        .pipe(gulp.dest("dist/css"))
-        .pipe(connect.reload());
-});
+
 
 gulp.task("js", () => {
     gulp.src("src/js/**/*.js")

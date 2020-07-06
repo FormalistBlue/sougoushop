@@ -1,7 +1,6 @@
 require(["/js/config.js"], () => {
-    require(["jquery", "url", "template", "request", "header", "footer"], (
+    require(["jquery","template", "request", "header", "footer"], (
         $,
-        url,
         template,
         req
     ) => {
@@ -16,6 +15,7 @@ require(["/js/config.js"], () => {
                         let list = res.data.items.list;
                         let cname = res.data.category.cname;
                         let categoriesTitle = res.data.categoriesTitle;
+                        console.log(list);
                         this.showgoods(list, cname, categoriesTitle);
                     }
                 });

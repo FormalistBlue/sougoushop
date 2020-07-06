@@ -4,11 +4,45 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="icon" href="/images/favicon.ico" type="image/x-icon" />
-        <link rel="stylesheet" href="/css/cart.css">
+        <link rel="stylesheet" href="/css/cart.css" />
         <title>购物车</title>
     </head>
     <body>
         <header></header>
+        <div class="cartContainer">
+            <div class="cartBox">
+                <div class="cartList">
+                    <div class="goodlist">
+                        <div class="goodthead">
+                            <div class="checkAll">
+                                <input id="checkAll" type="checkbox" /><label for="checkAll"
+                                    >全选</label
+                                >
+                            </div>
+                            <div class="thead goodHeadName">商品名称</div>
+                            <div class="thead singlePrice">单价</div>
+                            <div class="thead number">数量</div>
+                            <div class="thead smPrice">小计</div>
+                            <div class="thead doSome">操作</div>
+                        </div>
+                        <div class="tbody">
+                            <div class="tr">
+                                <div class="listCheck">
+                                    <input type="checkbox" />
+                                </div>
+                                <div class="goodDesBox">
+                                    <a class="picBox" href="#">
+                                        <img  src="/images/li1-2.jpg" alt="">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- <div class="goodCheck"></div> -->
+                </div>
+            </div>
+        </div>
+        <footer></footer>
         <script src="/libs/require.min.js" data-main="/js/cart.js"></script>
     </body>
 </html>
