@@ -87,7 +87,6 @@ gulp.task("libs", () => {
 });
 
 gulp.task("watch", () => {
-    gulp.watch("src/style/**", ["css2"]);
     gulp.watch("src/sass/**", ["css1"]);
     gulp.watch("src/html/*.html", ["html"]);
     gulp.watch("src/index.html", ["index"]);
@@ -103,4 +102,4 @@ gulp.task("server", function () {
     });
 });
 
-gulp.task("default", ["html", "index", "css1", "libs", "css2", "js", "img", "watch", "server"]);
+gulp.task("default", ["html", "index", "css1", "libs", "js", "img", "watch", "server"]);

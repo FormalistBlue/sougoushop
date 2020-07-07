@@ -3,20 +3,22 @@
 @import "footer";
 
 .cartContainer {
+    float: left;
     width: 100%;
-    margin-top: 80px;
     .cartBox {
         width: 1180px;
         margin: 0 auto;
         padding: 20px 0 10px 0;
     }
     .cartList {
+        float: left;
+        margin-bottom: 25px;
         font-size: 16px;
         background-color: #fff;
     }
     .goodlist {
         float: left;
-        width: 1180px;
+        width: 1140px;
         padding: 20px;
         .goodthead {
             width: 1140px;
@@ -79,6 +81,8 @@
             .picBox {
                 width: 98px;
                 height: 98px;
+                float: left;
+                display: block;
                 margin-top: 20px;
                 overflow: hidden;
                 border-radius: 2px;
@@ -89,6 +93,135 @@
                     height: 100%;
                 }
             }
+            .goodname {
+                float: right;
+                width: 400px;
+                height: 82px;
+                padding-top: 54px;
+            }
+            .goodnameA {
+                display: inline-block;
+                width: 100%;
+                line-height: 32px;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                word-break: break-all;
+                color: #595959;
+                text-decoration: none;
+                outline: none;
+            }
+            .goodprice {
+                width: 120px;
+                float: left;
+                line-height: 140px;
+                text-align: center;
+            }
+            .changeCount {
+                float: left;
+                width: 200px;
+                height: 141px;
+                position: relative;
+            }
+            .changeCountBox {
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                margin-left: -30px;
+                margin-top: -16px;
+                width: 55px;
+                height: 32px;
+            }
+            .minus {
+                width: 30px;
+                height: 30px;
+                line-height: 30px;
+                border-bottom-left-radius: 2px;
+                border-top-left-radius: 2px;
+                float: left;
+                line-height: 29px;
+                font-size: 20px;
+                text-align: center;
+                color: #8c8c8c;
+                background-color: #fff;
+                border: 1px solid #d9d9d9;
+                cursor: pointer;
+            }
+            .inputCount {
+                width: 50px;
+                height: 30px;
+                line-height: 30px;
+                float: left;
+                line-height: 48px;
+                text-align: center;
+                color: #262626;
+                border: 2px solid #d9d9d9;
+                font-size: 16px;
+            }
+            .smallPrice {
+                line-height: 140px;
+                text-align: center;
+                float: left;
+                width: 120px;
+                color: #ea413c;
+            }
+            .deleteBox {
+                width: 95px;
+                line-height: 140px;
+                text-align: center;
+                float: left;
+            }
+            .delete {
+                padding: 0 5px;
+                font-size: 14px;
+                color: #8c8c8c;
+                display: inline-block;
+                text-align: center;
+                cursor: pointer;
+                &:hover {
+                    color: #ea413c;
+                }
+            }
+        }
+    }
+    .goodCheckBox {
+        float: left;
+        height: 58px;
+        width: 100%;
+        background-color: #fff;
+        margin-bottom: 15px;
+    }
+    .bottomAll {
+        float: right;
+    }
+    .heji {
+        color: #595959;
+        line-height: 62px;
+    }
+    .bigPrice {
+        color: #ea413c;
+        font-weight: bold;
+        line-height: 62px;
+    }
+    .gocheck {
+        float: right;
+        display: block;
+        width: 140px;
+        height: 56px;
+        text-align: center;
+        line-height: 56px;
+        margin-left: 20px;
+        border-radius: 0;
+        background: #ea413c;
+        color: #fff;
+        border: 1px solid #ea413c;
+        &:hover {
+            background: #f77168;
+            border: 1px solid #f77168;
+        }
+        &:active {
+            background: #c42929;
+            border: 1px solid #c42929;
         }
     }
 }

@@ -1,6 +1,5 @@
 require(["/js/config.js"], () => {
-    require(["jquery","template", "request", "header", "footer"], (
-        $,
+    require(["template", "request", "header", "footer"], (
         template,
         req
     ) => {

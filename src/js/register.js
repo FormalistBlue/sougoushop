@@ -1,5 +1,5 @@
 require(["/js/config.js"], () => {
-    require(["jquery", "header", "footer"], ($) => {
+    require(["header", "footer"], () => {
      console.log(132);
     });
 });

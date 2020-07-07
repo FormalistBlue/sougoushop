@@ -1,5 +1,5 @@
 require(["/js/config.js"], () => {
-    require(["jquery", "template", "request", "header", "footer", "zoom"], ($, template, req) => {
+    require(["template", "request", "header", "footer", "zoom"], (template, req) => {
         class Detail {
             constructor() {
                 this.getDetail();

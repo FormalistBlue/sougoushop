@@ -1,5 +1,5 @@
 require(["js/config.js"], () => {
-    require(["swiper", "jquery", "header", "footer"], (swi, $) => {
+    require(["swiper","header", "footer"], (swi,) => {
         class index {
             constructor() {
                 this.useSwiper();

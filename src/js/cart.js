@@ -1,5 +1,5 @@
 require(['/js/config.js'],()=>{
-    require(["jquery","template","header","footer"],($,template)=>{
+    require(["template","header","footer"],(template)=>{
         class Cart{
             constructor(){
                 console.log("sdasd");
