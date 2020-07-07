@@ -27,7 +27,6 @@ define(["jquery", "template", "request"], ($, template, req) => {
                 info.forEach(function (item){
                     count += item.count
                 })
-                console.log($('.cartcounts'));
                 $('.cartcounts').text(count);
             }
 
