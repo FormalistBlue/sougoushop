@@ -1,11 +1,13 @@
-define(["jquery","template", "request"], ($,template, req) => {
+define(["jquery", "template", "request"], ($, template, req) => {
     class Header {
         constructor() {
             this.load();
         }
         load() {
-            $("header").load("/html/modules/header.html");
-            this.getNav();
+            $("header").load("/html/modules/header.html", () => {
+                this.getNav();
+                this. getCounts();
+            });
         }
         getNav() {
             req.getNavList().then((res) => {
@@ -17,6 +19,18 @@ define(["jquery","template", "request"], ($,template, req) => {
         }
         showNav(data) {
             $("#navList").html(template("navLi", { data }));
+        }
+        getCounts(){
+            const info = JSON.parse(localStorage.getItem("info"))
+            let count = 0
+            if(info){
+                info.forEach(function (item){
+                    count += item.count
+                })
+                console.log($('.cartcounts'));
+                $('.cartcounts').text(count);
+            }
+
         }
     }
     return new Header();
