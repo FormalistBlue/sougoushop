@@ -22,6 +22,30 @@ require(["/js/config.js"], () => {
                 });
                 this.addToCart(list.id, list.title, list.price, photo[0].url);
             }
+            // const arr = info
+            //   .map((item, index) => {
+            //     if (item.id == id) return index;
+            //   })
+            //   .filter((item) => item !== undefined);
+            // console.log(arr);
+            // if (arr.length === 0)
+            //   info.push({ id, imgUrl, title, originPrice, price, count: 1 });
+            // else info[arr[0]].count++;
+
+            // let existIndex = -1
+            // info.map((item,index) => {
+            //   if(item.id == id) {
+            //     existIndex = index
+            //   }
+            // })
+            // if(existIndex === -1) {
+            //   const obj = {id,imgUrl,title, originPrice, price, count:1}
+            //   info.push(obj)
+            // } else {
+            //   console.log(222, existIndex)
+            //   info[existIndex].count++
+            // }
+
             addToCart(id, title, price, imgurl) {
                 $(".buyBox").on("click", ".addcart", () => {
                     let info = null;
