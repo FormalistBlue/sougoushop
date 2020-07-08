@@ -11,7 +11,8 @@ require(["/js/config.js"], () => {
                         let list = res.data.detail;
                         let photo = res.data.detail.photo;
                         let descPhoto = res.data.detail.descContentList;
-                        this.showDetail(list, photo, descPhoto);
+                        let checked = "checked";
+                        this.showDetail(list, photo, descPhoto, checked);
                     }
                 });
             }
@@ -59,11 +60,11 @@ require(["/js/config.js"], () => {
                             }
                         });
                         if (flag) {
-                            const obj = { id, title, price, imgurl, count: 1 };
+                            const obj = { id, title, price, imgurl, count: 1, checked: true };
                             info.push(obj);
                         }
                     } else {
-                        info = [{ id, title, price, imgurl, count: 1 }];
+                        info = [{ id, title, price, imgurl, count: 1, checked: true }];
                     }
                     localStorage.setItem("info", JSON.stringify(info));
                     head.getCounts();

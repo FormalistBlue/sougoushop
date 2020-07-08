@@ -73,37 +73,37 @@
         <footer></footer>
 
         <script type="text/html" id="showdata">
-        {{each info item}}
-        <div class="tr">
-            <div class="listCheck">
-                <input type="checkbox" />
-            </div>
-            <div class="goodDesBox">
-                <a class="picBox" href="#">
-                    <img src="{{item.imgurl}}" alt="" />
-                </a>
-                <div class="goodname">
-                    <a class="goodnameA" href="#"
-                        >{{item.title}}</a
-                    >
+            {{each info item}}
+                <div class="tr" id="{{item.id}}">
+                    <div class="listCheck">
+                        <input type="checkbox" checked="{{checked}}"/>
+                    </div>
+                    <div class="goodDesBox">
+                        <a class="picBox" href="#">
+                            <img src="{{item.imgurl}}" alt="" />
+                        </a>
+                        <div class="goodname">
+                            <a class="goodnameA" href="#"
+                                >{{item.title}}</a
+                            >
+                        </div>
+                    </div>
+                    <div class="goodprice">
+                        {{item.price}}
+                    </div>
+                    <div class="changeCount">
+                        <div class="changeCountBox">
+                            <input class="inputCount" type="number" value="{{item.count}}"/>
+                        </div>
+                    </div>
+                    <div class="smallPrice">
+                        1234元
+                    </div>
+                    <div class="deleteBox">
+                        <a class="delete" href="javascript:;">删除</a>
+                    </div>
                 </div>
-            </div>
-            <div class="goodprice">
-                {{item.price}}
-            </div>
-            <div class="changeCount">
-                <div class="changeCountBox">
-                    <input class="inputCount" type="number" value="{{item.count}}"/>
-                </div>
-            </div>
-            <div class="smallPrice">
-                1234元
-            </div>
-            <div class="deleteBox">
-                <a class="delete" href="javascript:;">删除</a>
-            </div>
-        </div>
-        {{/each}}
+            {{/each}}
         </script>
 
         <script src="/libs/require.min.js" data-main="/js/cart.js"></script>
