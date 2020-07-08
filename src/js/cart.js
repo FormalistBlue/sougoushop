@@ -9,7 +9,7 @@ require(["/js/config.js"], () => {
                 $("#tbody").html(template("showdata", { info }));
                 this.deleteData(info);
                 this.changeCount(info);
-                this.smallCount(info);
+                this.countPrice(info);
                 // this.smp=$(".smallPrice");
                 // console.log(this.smp);
             }
@@ -37,20 +37,20 @@ require(["/js/config.js"], () => {
                             item.count = number;
                         }
                     });
-                    _this.smallCount(info);
+                    _this.countPrice(info);
                     localStorage.setItem("info", JSON.stringify(info));
                 });
             }
-            smallCount(info) {
+            countPrice(info) {
+                let bgcount = 0;
                 info.map((item, index) => {
                     let smcount = (item.count * item.price).toFixed(2);
+                    bgcount += +smcount;
                     let smp = $(".smallPrice").eq(index);
-                    console.log(index);
-                    console.log(smp);
-                    console.log(smcount);
-                    smp.text(smcount);
-                    // console.log( $(".smallPrice")[index]);
+                    smp.text("￥" + smcount);
                 });
+                bgcount = bgcount.toFixed(2);
+                $(".bigPrice").text("￥" + bgcount);
             }
         }
         return new Cart();
