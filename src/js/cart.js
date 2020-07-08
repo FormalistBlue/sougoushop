@@ -1,5 +1,5 @@
 require(["/js/config.js"], () => {
-    require(["template", "header", "footer"], (template) => {
+    require(["jquery", "template", "header", "footer"], ($, template) => {
         class Cart {
             constructor() {
                 this.showData();
@@ -9,6 +9,9 @@ require(["/js/config.js"], () => {
                 $("#tbody").html(template("showdata", { info }));
                 this.deleteData(info);
                 this.changeCount(info);
+                this.smallCount(info);
+                // this.smp=$(".smallPrice");
+                // console.log(this.smp);
             }
             deleteData(info) {
                 let _this = this;
@@ -17,11 +20,9 @@ require(["/js/config.js"], () => {
                     info.map((item, index) => {
                         if (id == item.id) {
                             info.splice(index, 1);
-                            console.log(info);
                         }
                     });
                     localStorage.setItem("info", JSON.stringify(info));
-                    console.log(this);
                     _this.showData();
                 });
             }
@@ -32,14 +33,23 @@ require(["/js/config.js"], () => {
                     info.map((item, index) => {
                         if (id == item.id) {
                             let number = $(".inputCount")[index].value;
-                            number ? number : 1;
-                            // console.log($('.inputCount')[index].value);
+                            number <= 1 ? 1 : number;
                             item.count = number;
-                            console.log(info);
                         }
                     });
+                    _this.smallCount(info);
                     localStorage.setItem("info", JSON.stringify(info));
-                    console.log(this);
+                });
+            }
+            smallCount(info) {
+                info.map((item, index) => {
+                    let smcount = (item.count * item.price).toFixed(2);
+                    let smp = $(".smallPrice").eq(index);
+                    console.log(index);
+                    console.log(smp);
+                    console.log(smcount);
+                    smp.text(smcount);
+                    // console.log( $(".smallPrice")[index]);
                 });
             }
         }

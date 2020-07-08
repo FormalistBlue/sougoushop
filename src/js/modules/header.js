@@ -25,7 +25,7 @@ define(["jquery", "template", "request"], ($, template, req) => {
             let count = 0
             if(info){
                 info.forEach(function (item){
-                    count += item.count
+                    count += item.count-0
                 })
                 $('.cartcounts').text(count);
             }
