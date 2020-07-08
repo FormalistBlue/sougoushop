@@ -10,8 +10,7 @@ require(["/js/config.js"], () => {
                 this.deleteData(info);
                 this.changeCount(info);
                 this.countPrice(info);
-                // this.smp=$(".smallPrice");
-                // console.log(this.smp);
+                this.changeChecked(info);
             }
             deleteData(info) {
                 let _this = this;
@@ -32,8 +31,10 @@ require(["/js/config.js"], () => {
                     let id = $(this).parents(".tr").attr("id");
                     info.map((item, index) => {
                         if (id == item.id) {
+                            if ($(".inputCount")[index].value <= 0) {
+                                $(".inputCount")[index].value = 1;
+                            }
                             let number = $(".inputCount")[index].value;
-                            number <= 1 ? 1 : number;
                             item.count = number;
                         }
                     });
@@ -45,12 +46,35 @@ require(["/js/config.js"], () => {
                 let bgcount = 0;
                 info.map((item, index) => {
                     let smcount = (item.count * item.price).toFixed(2);
-                    bgcount += +smcount;
+                    if (item.checked) {
+                        bgcount += +smcount;
+                    }
                     let smp = $(".smallPrice").eq(index);
                     smp.text("￥" + smcount);
                 });
                 bgcount = bgcount.toFixed(2);
                 $(".bigPrice").text("￥" + bgcount);
+            }
+            changeChecked(info) {
+                let _this = this;
+
+                info.map((item, index) => {
+                    if (item.checked) {
+                        $(".checkit").eq(index).attr("checked", true);
+                    }
+                });
+
+                $(".goodlist").on("input", ".checkit", function () {
+                    let id = $(this).parents(".tr").attr("id");
+                    info.map((item, index) => {
+                        if (id == item.id) {
+                            item.checked = !item.checked;
+                        }
+                    });
+                    console.log(info);
+                    localStorage.setItem("info", JSON.stringify(info));
+                    _this.showData();
+                });
             }
         }
         return new Cart();
