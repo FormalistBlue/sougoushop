@@ -8,6 +8,7 @@ require(["/js/config.js"], () => {
                 const id = window.location.search.slice(4);
                 req.getDetailData(id).then((res) => {
                     if (res.code === 200) {
+                        console.log(res);
                         let list = res.data.detail;
                         let photo = res.data.detail.photo;
                         let descPhoto = res.data.detail.descContentList;
@@ -67,6 +68,11 @@ require(["/js/config.js"], () => {
                         info = [{ id, title, price, imgurl, count: 1, checked: true }];
                     }
                     localStorage.setItem("info", JSON.stringify(info));
+                    $(".warning").animate({ opacity: 1 }, 500, 'linear', () => {
+                        setTimeout(() => {
+                            $(".warning").animate({ opacity: 0 }, 500, 'linear')
+                        }, 500)
+                    })
                     head.getCounts();
                 });
             }
