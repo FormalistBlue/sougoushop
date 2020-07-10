@@ -10,6 +10,36 @@
         margin: 0 auto;
         padding: 20px 0 10px 0;
     }
+    .cartEmpty {
+        width: 1180px;
+        height: 400px;
+        margin: 0 auto;
+        background-color: #e6e6e6;
+        display: none;
+        overflow: hidden;
+        .emptyBox {
+            width: 400px;
+            height: 200px;
+            margin: 0 auto;
+            margin-top: 100px;
+            text-align: center;
+        }
+        span {
+            font-size: 30px;
+            color: #666;
+        }
+        a {
+            display: block;
+            margin: 30px auto;
+            width: 120px;
+            height: 30px;
+            line-height: 30px;
+            color: #ea413c;
+            background-color: #fff;
+            border: 3px solid #ea413c;
+            border-radius: 10px;
+        }
+    }
     .cartList {
         float: left;
         margin-bottom: 25px;

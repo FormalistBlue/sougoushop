@@ -3,7 +3,7 @@ require(["/js/config.js"], () => {
         class Cart {
             constructor() {
                 this.showData();
-                this.buyDiv();
+                // this.buyDiv();
             }
             showData() {
                 let info = JSON.parse(localStorage.getItem("info"));
@@ -13,6 +13,7 @@ require(["/js/config.js"], () => {
                 this.countPrice(info);
                 this.changeChecked(info);
                 this.setAllCheck(info);
+                this.empty(info);
             }
             deleteData(info) {
                 let _this = this;
@@ -34,6 +35,7 @@ require(["/js/config.js"], () => {
                     let id = $(this).parents(".tr").attr("id");
                     info.map((item, index) => {
                         if (id == item.id) {
+                            console.log(this);
                             if ($(".inputCount")[index].value <= 0) {
                                 $(".inputCount")[index].value = 1;
                             }
@@ -90,14 +92,14 @@ require(["/js/config.js"], () => {
                     // console.log($("#checkAll").prop("checked"))
                     if (!$("#checkAll").prop("checked")) {
                         $(".checkit").prop("checked", false);
-                        info.map((item, index) => {
+                        info.map((item) => {
                             item.checked = false;
                         });
                         localStorage.setItem("info", JSON.stringify(info));
                         _this.countPrice(info);
                     } else {
                         $(".checkit").prop("checked", true);
-                        info.map((item, index) => {
+                        info.map((item) => {
                             item.checked = true;
                         });
                         localStorage.setItem("info", JSON.stringify(info));
@@ -105,14 +107,28 @@ require(["/js/config.js"], () => {
                     }
                 });
             }
-            buyDiv() {
-                // $(".checkit")
-                console.log($(".goodCheckBox"));
-                window.onscroll = function () {
-                    console.log(document.getElementsByClassName("goodCheckBox")[0].getBoundingClientRect().bottom);
-
-                };
+            empty(info) {
+                console.log(info.length);
+                if (info.length == 0) {
+                    console.log("no");
+                    $(".cartBox").css("display", "none");
+                    $(".cartEmpty").css("display", "block");
+                } else {
+                    console.log("yes");
+                    $(".cartEmpty").css("display", "none");
+                    $(".cartBox").css("display", "block");
+                }
             }
+            // buyDiv() {
+            //     // $(".checkit")
+            //     console.log($(".goodCheckBox"));
+            //     window.onscroll = function () {
+            //         console.log(
+            //             document.getElementsByClassName("goodCheckBox")[0].getBoundingClientRect()
+            //                 .bottom
+            //         );
+            //     };
+            // }
         }
         return new Cart();
     });
